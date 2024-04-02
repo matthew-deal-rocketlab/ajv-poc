@@ -36,3 +36,5 @@ export const formSchema = {
   required: ["userName", "email", "password"],
   additionalProperties: false,
 } as JSONSchemaType<MyData>;
+
+//  This technically isn't type safe, this could be any type.

@@ -33,6 +33,7 @@ Findings:
 - Because AJV is so verbose, a complex form would lead to a huge schema file.
 - Ajv in React requires three dependencies, Ajv, Ajv-formats, and Ajv-errors, compared to Zod which is just Zod
 - Zod has some weird behaviors, such as converting a string to a number. Basically it's a verbose syntax. But this seems minor.
+- AJV is not technically not typeSafe, because you could pass any type
 
 Check out the schemas for a real comparison between the two libraries.
 

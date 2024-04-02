@@ -31,6 +31,7 @@ Findings:
 - AJV isn't TS, and if you want to make it Type Safe you have to write the types in a type or interface, and then pass that to the schema, in which you have to rewrite the type again, which is a bad DX and a lot of boilerplate
 - Zod is TS, and can be inferred, which leads to a better DX and less code in production
 - Because AJV is so verbose, a complex form would lead to a huge schema file.
+- Ajv in React requires three dependencies, Ajv, Ajv-formats, and Ajv-errors, compared to Zod which is just Zod
 
 Check out the schemas for a real comparison between the two libraries.
 

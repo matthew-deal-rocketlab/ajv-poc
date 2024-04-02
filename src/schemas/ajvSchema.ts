@@ -1,4 +1,3 @@
-// ajvSchema.ts
 import { JSONSchemaType } from "ajv";
 
 // Reusable type definitions

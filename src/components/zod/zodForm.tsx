@@ -1,7 +1,9 @@
 // ZodForm.jsx or ZodForm.tsx
 "use client";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { formSchema } from "@/schemas/zodSchema";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,7 +15,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { z } from "zod";
 
 export default function ZodForm() {
   const form = useForm({
@@ -25,9 +26,7 @@ export default function ZodForm() {
     },
   });
 
-  // Define a submit handler.
   function zodOnSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
     console.log(values);
   }
 

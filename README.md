@@ -32,6 +32,7 @@ Findings:
 - Zod is TS, and can be inferred, which leads to a better DX and less code in production
 - Because AJV is so verbose, a complex form would lead to a huge schema file.
 - Ajv in React requires three dependencies, Ajv, Ajv-formats, and Ajv-errors, compared to Zod which is just Zod
+- Zod has some weird behaviors, such as converting a string to a number. Basically it's a verbose syntax. But this seems minor.
 
 Check out the schemas for a real comparison between the two libraries.
 

@@ -1,11 +1,8 @@
-// AJVForm.jsx or AJVForm.tsx
 "use client";
 
-import addFormats from "ajv-formats";
 import { useForm } from "react-hook-form";
 import { fullFormats } from "ajv-formats/dist/formats";
 import { ajvResolver } from "@hookform/resolvers/ajv";
-import Ajv from "ajv";
 import {
   Form,
   FormControl,
@@ -19,9 +16,6 @@ import { Button } from "../ui/button";
 import { formSchema, MyData } from "@/schemas/ajvSchema";
 
 export default function AJVForm() {
-  const ajv = new Ajv({ allErrors: true });
-  addFormats(ajv);
-
   const form = useForm<MyData>({
     resolver: ajvResolver(formSchema, { formats: fullFormats }),
     defaultValues: {

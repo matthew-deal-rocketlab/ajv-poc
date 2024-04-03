@@ -26,14 +26,29 @@ This POC was made for two purposes:
 
 Findings:
 
+AJV GOOD:
+
+- AJV is a mature library
+- AJV is very fast at scale
+
+AJV BAD:
+
 - AJV is a big package at 123ks
 - AJV is very verbose
 - AJV isn't TS, and if you want to make it TypeSafe you have to write the types in a type or interface, and then pass that to the schema, then you need to rewrite the type again in the AJV schema.
 - AJV in React requires three dependencies, Ajv, Ajv-formats, and Ajv-errors
-- Because AJV is so verbose, a complex form would lead to a huge schema file.
+- AJV in a complex form would lead to a huge schema file.
 - AJV is technically not typeSafe, because you could pass any type
+
+ZOD GOOD:
+
 - Zod is TS, and can be inferred, which leads to a better DX and less code in production
-- Zod has some weird behaviors, such as converting a string to a number. Basically it's a verbose syntax. But this seems minor.
+- Zod is a small package at 53ks
+- Zod is less verbose
+
+ZOD BAD:
+
+- Zod has some weird behaviors, such as converting a string to a number.
 
 Check out the schemas for a real comparison between the two libraries.
 

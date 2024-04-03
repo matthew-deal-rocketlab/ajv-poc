@@ -35,10 +35,9 @@ AJV BAD:
 
 - AJV is a big package at 123ks
 - AJV is very verbose
-- AJV isn't TS, and if you want to make it TypeSafe you have to write the types in a type or interface, and then pass that to the schema, then you need to rewrite the type again in the AJV schema.
+- AJV requires manual duplication of TypeScript types in its schema for type safety, which can still technically allow any type to be passed.
 - AJV in React requires three dependencies, Ajv, Ajv-formats, and Ajv-errors
 - AJV in a complex form would lead to a huge schema file.
-- AJV is technically not typeSafe, because you could pass any type
 
 ZOD GOOD:
 
